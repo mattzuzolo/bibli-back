@@ -15,8 +15,9 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def create
+    byebug
     @user = User.create(user_params)
-    @employee.save if @user.valid?
+    @user.save if @user.valid?
     render json: @user.to_json()
   end
 
