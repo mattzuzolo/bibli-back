@@ -16,14 +16,14 @@ class Api::V1::BooksController < ApplicationController
 
   def create
     @book = Book.create(book_params)
-    @employee.save if @book.valid?
+    @book.save if @book.valid?
     render json: @book.to_json()
   end
 
   private
 
     def book_params
-      params.permit(:email)
+      params.permit(:title, :author)
     end
 
     def find_book
