@@ -1,7 +1,11 @@
 class Api::V1::CollectionsController < ApplicationController
 
   def index
-    @collections = Collection.all
+    if params[:user_id]
+      @collections = User.find(params[:user_id]).collections
+    else
+      @collections = Collection.all
+    end
     render json: @collections.to_json()
   end
 
@@ -11,7 +15,8 @@ class Api::V1::CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
-    render json: @collection.to_json()
+    @collection_with_books = @collection.books
+    render json: @collection_with_books.to_json()
   end
 
   def create
