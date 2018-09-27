@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2018_09_25_150725) do
   create_table "books", force: :cascade do |t|
     t.string "title"
     t.string "author"
+    t.string "genre"
+    t.string "year"
+    t.string "description"
+    t.integer "page_count"
+    t.string "google_id"
+    t.string "google_url"
+    t.string "thumbnail_url"
+    t.string "isbn_ten"
+    t.string "isbn_thirteen"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
