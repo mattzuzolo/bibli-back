@@ -6,7 +6,7 @@ class Api::V1::BooksController < ApplicationController
   end
 
   def show
-    @book = Book.find(params[:google_id])
+    @book = Book.find_by(google_id: params[:id])
     render json: @book.to_json()
   end
 
