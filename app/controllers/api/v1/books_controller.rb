@@ -8,7 +8,6 @@ class Api::V1::BooksController < ApplicationController
   def show
     @book = Book.find(params[:google_id])
     render json: @book.to_json()
-    #test commit
   end
 
   def new
