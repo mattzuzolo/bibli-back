@@ -1,8 +1,11 @@
 class Api::V1::CollectionsController < ApplicationController
 
   def index
+    #checks to see if user is specified to return the user's collection list
     if params[:user_id]
       @collections = User.find(params[:user_id]).collections
+
+    #or returns all of the collections in the database
     else
       @collections = Collection.all
     end

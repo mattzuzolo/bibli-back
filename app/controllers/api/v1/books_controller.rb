@@ -6,6 +6,7 @@ class Api::V1::BooksController < ApplicationController
   end
 
   def show
+    #Show page will display books based on google api id in URL rather than local id
     @book = Book.find_by(google_id: params[:id])
     render json: @book.to_json()
   end
