@@ -41,7 +41,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 
   #added this to development gems. Commented postgres gem above
-  # gem 'pg', '~> 0.18'
+  gem 'pg', '~> 0.18'
 end
 
 
