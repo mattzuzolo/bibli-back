@@ -26,4 +26,6 @@ Rails.application.routes.draw do
     end
   end
 
+  post '/login', to: 'sessions#create'
+
 end

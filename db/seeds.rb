@@ -10,9 +10,9 @@ User.destroy_all
 Collection.destroy_all
 Book.destroy_all
 
-matt = User.create(email: "matt@gmail.com")
-david = User.create(email: "david@gmail.com")
-kayla = User.create(email: "kayla@gmail.com")
+matt = User.create(password: "123456789", email: "matt@gmail.com")
+david = User.create(password: "123456789", email: "david@gmail.com")
+kayla = User.create(password: "123456789", email: "kayla@gmail.com")
 
 matts_collection_one = Collection.create(name: "Matt Collection 1", user_id: matt.id)
 matts_collection_two = Collection.create(name: "Matt Collection 2", user_id: matt.id)
