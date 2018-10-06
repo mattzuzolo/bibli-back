@@ -6,7 +6,7 @@ This is the Ruby on Rails API supporting Bibli.
 
 [Click here to view the front-end repository](https://github.com/mattzuzolo/bibli)
 
-[See the live demo here](https://mattzuzolo.com/) *— Coming Soon*
+[See the live demo here](https://bibli-books.herokuapp.com)
 
 ## Technology
 
