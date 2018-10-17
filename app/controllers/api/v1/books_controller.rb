@@ -23,6 +23,7 @@ class Api::V1::BooksController < ApplicationController
 
   private
 
+    #isbn not currently being used
     def book_params
       params.permit(:title, :author, :genre, :year, :description, :page_count, :google_id, :google_url, :thumbnail_url, :isbn_ten, :isbn_thirteen)
     end
