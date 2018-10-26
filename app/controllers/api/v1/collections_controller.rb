@@ -18,8 +18,10 @@ class Api::V1::CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
-    @collection_with_books = @collection.books
-    render json: @collection_with_books.to_json()
+    render json: @collection.to_json()
+
+    # @collection_with_books = @collection.books
+    # render json: @collection_with_books.to_json()
   end
 
   def create
@@ -40,7 +42,7 @@ class Api::V1::CollectionsController < ApplicationController
   private
 
     def collection_params
-      params.permit(:name, :user_id)
+      params.permit(:name, :user_id, :name)
     end
 
     def find_collection
