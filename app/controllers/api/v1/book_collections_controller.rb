@@ -11,7 +11,17 @@ class Api::V1::BookCollectionsController < ApplicationController
     render json: @book_collection.to_json()
   end
 
-  def book_collection_params
-    params.require(:book_collection).permit(:book_id, :collection_id)
+  def destroy
+    find_book_collection.destroy
   end
+
+  private
+
+    def book_collection_params
+      params.require(:book_collection).permit(:book_id, :collection_id)
+    end
+
+    def find_book_collection
+      @book_collection = BookCollection.find(params[:id])
+    end
 end
