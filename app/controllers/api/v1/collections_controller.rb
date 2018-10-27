@@ -18,7 +18,7 @@ class Api::V1::CollectionsController < ApplicationController
 
   def show
     @collection = Collection.find(params[:id])
-    render json: @collection.to_json()
+    render json: @collection.to_json(include: :books)
 
     # @collection_with_books = @collection.books
     # render json: @collection_with_books.to_json()
